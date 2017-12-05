@@ -1,10 +1,10 @@
-#Book api
+# Book api
 
-##Get all books
+## Get all books
 
 GET /books
 
-####Response
+#### Response
 ```json
 [{
     "_id":"af0775ca-73f2-4c83-8e30-39400be1ea8a",
@@ -17,10 +17,11 @@ GET /books
     "__v":0
 }]
 ```
-##Create new book
+## Create new book
+
 POST /books
 
-####Request body
+#### Request body
 ```json
 {
     "title":"454353454",
@@ -28,7 +29,7 @@ POST /books
 }
 ```
 
-###Response
+### Response
 ```json
 [{
     "_id":"af0775ca-73f2-4c83-8e30-39400be1ea8a",
@@ -37,10 +38,11 @@ POST /books
     "__v":0
 }]
 ```
-##Get one book by id
+## Get one book by id
+
 GET /books/:id
 
-###Response
+### Response
 ```json
 [{
     "_id":"af0775ca-73f2-4c83-8e30-39400be1ea8a",
@@ -50,10 +52,11 @@ GET /books/:id
 }]
 ```
 
-##Rate book by id
+## Rate book by id
+
 PATCH /books/:id
 
-###Response
+### Response
 ```json
 [{
     "_id":"af0775ca-73f2-4c83-8e30-39400be1ea8a",
