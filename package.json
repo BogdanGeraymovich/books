@@ -7,7 +7,8 @@
     "start": "node index.js",
     "start:watch": "nodemon",
     "prestart:prod": "tsc",
-    "start:prod": "node dist/server.js"
+    "start:prod": "node dist/server.js",
+    "test": "jest --config=jest.json"
   },
   "dependencies": {
     "@nestjs/common": "^4.4.0",
@@ -16,18 +17,24 @@
     "@nestjs/testing": "^4.4.0",
     "@nestjs/websockets": "^4.4.0",
     "bluebird": "^3.5.1",
+    "jest": "^21.2.1",
     "mongoose": "^4.13.6",
     "nest-mongoose": "^1.0.4",
     "redis": "^2.7.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.0",
+    "ts-jest": "^21.2.4",
     "tslint": "^5.8.0",
     "typescript": "^2.5.2",
     "uuid": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^8.0.28",
+    "mockingoose": "^2.4.0",
+    "mongoose-mock": "^0.4.0",
+    "mongoose-model-mock": "^1.2.0",
     "nodemon": "^1.12.1",
+    "proxyquire": "^1.8.0",
     "ts-node": "^3.3.0"
   }
 }

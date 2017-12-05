@@ -8,7 +8,7 @@ export class BooksController {
 
     @Post()
     async create(@Body() book: Book) {
-        this.booksService.create(book);
+        return this.booksService.create(book);
     }
 
     @Get()
