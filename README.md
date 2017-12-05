@@ -55,7 +55,7 @@ GET /books/:id
 
 ## Rate book by id
 
-PATCH /books/:id
+PATCH /books/:id/rate
 
 ### Response
 ```json
