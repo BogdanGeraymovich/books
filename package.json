@@ -30,11 +30,7 @@
   },
   "devDependencies": {
     "@types/node": "^8.0.28",
-    "mockingoose": "^2.4.0",
-    "mongoose-mock": "^0.4.0",
-    "mongoose-model-mock": "^1.2.0",
     "nodemon": "^1.12.1",
-    "proxyquire": "^1.8.0",
     "ts-node": "^3.3.0"
   }
 }

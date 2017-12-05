@@ -1,5 +1,3 @@
-import * as mongooseMock from 'mongooseMock';
-import * as proxyquire from 'proxyquire';
 import { BookRepository } from '../../../modules/books/repositories/book.repository';
 
 const booksArray = [{
@@ -18,9 +16,14 @@ describe('BookRepository', () => {
 
     beforeEach(async () => {
         BookModel = {
-            find: jest.fn().mockImplementation(() => ({ lean: () => ({ exec: () => booksArray }) })),
+            find: jest.fn().mockImplementation(() => ({
+                lean: () => ({ exec: () => booksArray }),
+            })),
             create: jest.fn().mockImplementation(() => booksArray[0]),
-            findOne: jest.fn().mockImplementation(() => ({ lean: () => ({ exec: () => booksArray[0] }), save: () => booksArray[0] })),
+            findOne: jest.fn().mockImplementation(() => ({
+                lean: () => ({ exec: () => booksArray[0] }),
+                save: () => booksArray[0],
+            })),
             save: jest.fn().mockImplementation(() => booksArray[0]),
         };
         bookRepository = new BookRepository({ mongooseModel: BookModel });
