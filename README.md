@@ -1,7 +1,9 @@
 #Book api
 
 ##Get all books
+
 GET /books
+
 ####Response
 ```json
 [{
