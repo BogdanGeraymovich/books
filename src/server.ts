@@ -5,13 +5,16 @@ import { ApplicationModule } from './modules/app.module';
 import { config } from '../config/config';
 import { NestMongooseModel } from 'nest-mongoose';
 
-mongoose.connect(config.database, { useMongoClient: true });
-mongoose.Promise = bluebird;
-NestMongooseModel.connection = mongoose.connection;
-
 async function bootstrap() {
-	const app = await NestFactory.create(ApplicationModule);
-	await app.listen(config.port);
+    try {
+        mongoose.Promise = bluebird;
+        await mongoose.connect(config.database, { useMongoClient: true });
+        NestMongooseModel.connection = mongoose.connection;
+        const app = await NestFactory.create(ApplicationModule);
+        await app.listen(config.port);
+    } catch (err) {
+        console.log(err);
+    }
 }
 
 bootstrap();

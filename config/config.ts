@@ -1,4 +1,4 @@
 export const config = {
-    database: 'mongodb://localhost:32768/books',
+    database: 'mongodb://mongodb/books',
     port: 3000,
 };
