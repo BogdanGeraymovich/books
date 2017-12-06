@@ -1,6 +1,7 @@
 import { Component, Inject } from '@nestjs/common';
 import { BookRepository } from '../repositories/book.repository';
 import { Book } from '../interfaces/books.interface';
+import { CreateBookDto } from '../dto/createBook.dto';
 
 @Component()
 export class BooksService {
@@ -10,7 +11,7 @@ export class BooksService {
         this.bookRepository = bookRepository;
     }
 
-    create(book: Book) {
+    create(book: CreateBookDto) {
         return this.bookRepository.create(book);
     }
 
