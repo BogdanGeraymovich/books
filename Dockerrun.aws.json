@@ -34,6 +34,7 @@
     }
   ],
   "family": "books-app",
+  "memoryReservation": 300,
   "volumes": [
     {
       "host": {
