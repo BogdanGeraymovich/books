@@ -1,19 +1,45 @@
 {
-  "AWSEBDockerrunVersion": "1",
-  "Image": {
-    "Name": "bgeraymovich/books",
-    "Update": "true"
-  },
-  "Ports": [
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
     {
-      "ContainerPort": "80"
+      "essential": true,
+      "links": [
+        "mongodb"
+      ],
+      "name": "app",
+      "portMappings": [
+        {
+          "containerPort": 3000,
+          "hostPort": 80
+        }
+      ]
+    },
+    {
+      "essential": true,
+      "image": "mongo",
+      "mountPoints": [
+        {
+          "containerPath": "/data/db",
+          "sourceVolume": "_Data"
+        }
+      ],
+      "name": "mongodb",
+      "portMappings": [
+        {
+          "containerPort": 27017,
+          "hostPort": 27017
+        }
+      ]
     }
   ],
-  "Volumes": [
+  "family": "",
+  "volumes": [
     {
-      "HostDirectory": "/var/app/mydb",
-      "ContainerDirectory": "/etc/mysql"
+      "host": {
+        "sourcePath": "./data"
+      },
+      "name": "_Data"
     }
-  ],
-  "Logging": "/var/log/nginx"
+  ]
+
 }
