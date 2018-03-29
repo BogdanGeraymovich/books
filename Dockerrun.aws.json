@@ -39,7 +39,7 @@
   "volumes": [
     {
       "host": {
-        "sourcePath": "./data"
+        "sourcePath": "/data"
       },
       "name": "_Data"
     }
