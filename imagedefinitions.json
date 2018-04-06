@@ -1,16 +1,6 @@
 [
   {
     "name": "books-app",
-    "image": "122238746683.dkr.ecr.us-east-2.amazonaws.com/books-app",
-    "cpu": 100,
-    "portMappings": [
-      {
-        "protocol": "tcp",
-        "containerPort": 3000,
-        "hostPort": 80
-      }
-    ],
-    "memory": 128,
-    "essential": true
+    "image": "122238746683.dkr.ecr.us-east-2.amazonaws.com/books-app"
   }
 ]
