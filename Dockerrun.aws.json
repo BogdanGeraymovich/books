@@ -6,7 +6,7 @@
       "links": [
         "mongodb"
       ],
-      "name": "app",
+      "name": "books-app",
       "memoryReservation": 300,
       "image": "122238746683.dkr.ecr.us-east-2.amazonaws.com/books-app:latest",
       "portMappings": [
