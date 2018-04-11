@@ -66,3 +66,4 @@ PATCH /books/:id/rate
     "__v":0
 }
 ```
+
