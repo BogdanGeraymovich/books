@@ -19,7 +19,7 @@
     "@nestjs/websockets": "^4.4.0",
     "bluebird": "^3.5.1",
     "jest": "^21.2.1",
-    "mongoose": "^4.13.6",
+    "mongoose": "^4.13.17",
     "nest-mongoose": "^1.0.4",
     "redis": "^2.7.1",
     "reflect-metadata": "^0.1.10",
